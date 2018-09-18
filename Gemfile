@@ -20,6 +20,10 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'factory_bot_rails'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :production do
