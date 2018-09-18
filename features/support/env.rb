@@ -1,5 +1,8 @@
 require 'cucumber/rails'
 
+require 'coveralls'
+Coveralls.wear_merged!('rails')
+
 ActionController::Base.allow_rescue = false
 
 begin
@@ -9,4 +12,3 @@ rescue NameError
 end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
