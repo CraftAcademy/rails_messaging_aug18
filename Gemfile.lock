@@ -51,7 +51,6 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
-    byebug (10.0.2)
     capybara (3.7.2)
       addressable
       mini_mime (>= 0.1.3)
@@ -110,6 +109,11 @@ GEM
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.1)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     gherkin (5.1.0)
     globalid (0.4.1)
@@ -148,9 +152,8 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    pry-byebug (3.6.0)
-      byebug (~> 10.0)
-      pry (~> 0.10)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     public_suffix (3.0.3)
     puma (3.11.4)
     rack (2.0.5)
@@ -191,6 +194,23 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-rails (3.8.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -202,6 +222,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.2)
@@ -243,18 +265,21 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
+  factory_bot_rails
   jbuilder (~> 2.0)
   jquery-rails
   loofah (~> 2.2.1)
   mailboxer
   pg (~> 0.15)
-  pry-byebug
+  pry-rails
   puma (~> 3.7)
   rails (= 5.1.5)
   rails-html-sanitizer (~> 1.0.4)
   rails_12factor
   rake (~> 11.1, >= 11.1.2)
+  rspec-rails
   sass-rails (~> 5.0)
+  shoulda-matchers
   spring
   sprockets (~> 3.7.2)
   turbolinks
