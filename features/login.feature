@@ -12,6 +12,6 @@ Feature: Registered user Login from homepage
     Scenario: Login successful (happy path)
         When I click on "Login" link
         And I fill in "Email" with "rupert@gmail.com"
-        And I fill in "Password" with "rupert"
+        And I fill in "Password" with "rupertlion"
         And I click on "Log in" link
         Then I should see a message that states "Signed in successfully."

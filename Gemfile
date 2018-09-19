@@ -16,9 +16,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-group :development do
-  gem 'spring'
-  gem 'web-console', '~> 2.0'
+group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_bot_rails'
@@ -27,6 +25,11 @@ group :development do
   gem 'shoulda-matchers'
   gem 'coveralls', require: false
   gem 'launchy'
+end
+
+group :development do
+  gem 'spring'
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
