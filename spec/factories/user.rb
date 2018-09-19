@@ -3,6 +3,6 @@ FactoryBot.define do
       name { "MyString" }
       email { "MyString" }
       password { "MyPassword" }
-      password_confirmation { "MyPassword" }
+      encrypted_password { "MyPassword" }
     end
 end

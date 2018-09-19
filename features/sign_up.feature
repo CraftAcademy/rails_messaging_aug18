@@ -5,8 +5,8 @@ Feature: Create user account
 
     Background: 
         Given the following registered user exists
-            | name            |email            | password           |
-            | Happy           |happy@gmail.com  | password           |
+            | name            |email            | password           | password_confirmation    |
+            | Happy           |happy@gmail.com  | password           | password                 |
         And I visit the landing page
 
     Scenario: Sign up successfully accomplished
