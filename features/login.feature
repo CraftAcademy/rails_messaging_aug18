@@ -15,3 +15,10 @@ Feature: Registered user Login from homepage
         And I fill in "Password" with "rupertlion"
         And I click on "Log in" link
         Then I should see a message that states "Signed in successfully."
+
+    Scenario: Login unsuccessful (sad path)
+        When I click on "Login" link
+        And I fill in "Email" with "rupert@me.com"
+        And I fill in "Password" with "rupertlion"
+        And I click on "Log in" link
+        Then I should see a message that states "Invalid Email or password."
