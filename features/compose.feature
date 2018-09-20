@@ -17,7 +17,6 @@ Feature: Compose and send email
         
     Scenario: Compose email and send
         When I click on "Compose" link
-        Then show me the page
         And I select the option "Sad"
         And I fill in "Subject" with "Testing compose"
         And I fill in "Type your message here" with "This is a test message"
