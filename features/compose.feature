@@ -13,13 +13,13 @@ Feature: Compose and send email
         And I fill in "Email" with "happy@gmail.com"
         And I fill in "Password" with "password"
         And I click on "Log in" link
-        Then show me the page
         And I click on "Inbox" link
         
     Scenario: Compose email and send
         When I click on "Compose" link
-        And I fill in "Recipients" with "Sad"
+        Then show me the page
+        And I select the option "Sad"
         And I fill in "Subject" with "Testing compose"
-        And I fill in "Message" with "This is a test message"
+        And I fill in "Type your message here" with "This is a test message"
         And I click on "Send Message" link
         Then I should see a message that states "Your message was successfully sent!"
