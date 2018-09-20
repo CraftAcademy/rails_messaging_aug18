@@ -14,6 +14,6 @@ And("I select the option {string}") do |option|
 end
 
 Then("I should see the sent messages increase by {string}") do |increment|
-    # user = .find_by(name: name)
-    # expect { find('#message_content').send_keys(:enter) }.to \ change{current_user.messages.count}.by(1)
+    count = mailbox.inbox.count
+    expect(count).to eq increment.to_i
 end
