@@ -5,9 +5,9 @@ Feature: Compose and send email
 
     Background: 
         Given the following registered users exist
-            | name            |email            | password           | password_confirmation    |
-            | Happy           |happy@gmail.com  | password           | password                 |
-            | Sad             |sad@gmail.com    | password           | password                 |
+            | name  | email           | password | password_confirmation |
+            | Happy | happy@gmail.com | password | password              |
+            | Sad   | sad@gmail.com   | password | password              |
         And I visit the landing page
         And I click on "Login" link
         And I fill in "Email" with "happy@gmail.com"
@@ -22,3 +22,10 @@ Feature: Compose and send email
         And I fill in "Type your message here" with "This is a test message"
         And I click on "Send Message" link
         Then I should see a message that states "Your message was successfully sent!"
+        And I click on "Sent" link
+        And I should see the sent messages increase by "1"
+
+    Scenario: Compose email and send - failed due to no inputs (sad path)
+        When I click on "Compose" link
+        And I click on "Send Message" link
+        Then I should see a message that states "We're sorry, but something went wrong."
