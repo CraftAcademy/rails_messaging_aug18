@@ -11,7 +11,7 @@ Feature: Create user account
 
     Scenario: Sign up successfully accomplished
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with "ThisIsMyPassword"
         And I fill in "Password confirmation" with "ThisIsMyPassword"
@@ -20,7 +20,7 @@ Feature: Create user account
     
     Scenario: Sign up unsuccessfull - password too short
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with "This"
         And I fill in "Password confirmation" with "This"
@@ -29,7 +29,7 @@ Feature: Create user account
         
     Scenario: Sign up unsuccessfull - email has been taken
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "happy@gmail.com"
         And I fill in "Password" with "ThisIsMyPassword"
         And I fill in "Password confirmation" with "ThisIsMyPassword"
@@ -38,7 +38,7 @@ Feature: Create user account
 
     Scenario: Sign up unsuccessfull - password unconfirmed
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with "ThisIsMyPassword"
         And I fill in "Password confirmation" with "ThisIsMyPasswor"
@@ -47,7 +47,7 @@ Feature: Create user account
 
     Scenario: Sign up unsuccessfull - name has been taken
         When I click on "Sign up" link
-        Then I fill in "Name" with "Happy"
+        And I fill in "Name" with "Happy"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with "ThisIsMyPassword"
         And I fill in "Password confirmation" with "ThisIsMyPassword"
@@ -56,7 +56,7 @@ Feature: Create user account
 
     Scenario: Sign up unsuccessfull - password can't be blank
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with ""
         And I fill in "Password confirmation" with ""
