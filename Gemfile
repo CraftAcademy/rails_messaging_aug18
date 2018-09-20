@@ -30,6 +30,8 @@ end
 group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :production do

@@ -1,7 +1,7 @@
 Feature: Compose and send email
     As a logged in user
     In order to send an email
-    I would like to be compose an email and send it from my account
+    I would like to compose an email and send it from my account
 
     Background: 
         Given the following registered users exist
@@ -23,9 +23,4 @@ Feature: Compose and send email
         And I click on "Send Message" link
         Then I should see a message that states "Your message was successfully sent!"
         And I click on "Sent" link
-        And I should see the sent messages increase by "1"
-
-    Scenario: Compose email and send - failed due to no inputs (sad path)
-        When I click on "Compose" link
-        And I click on "Send Message" link
-        Then I should see a message that states "We're sorry, but something went wrong."
+        And I should see message "Testing compose"

@@ -13,7 +13,10 @@ And("I select the option {string}") do |option|
     select option, from: "conversation_recipients"
 end
 
-Then("I should see the sent messages increase by {string}") do |increment|
-    count = mailbox.inbox.count
-    expect(count).to eq increment.to_i
+Then("I should see message {string}") do |message|
+    expect(page).to have_content message    
+end
+
+And("I click on {string}") do
+    find('.btn-success').click
 end
