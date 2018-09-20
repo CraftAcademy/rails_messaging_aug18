@@ -20,7 +20,7 @@ Feature: Create user account
     
     Scenario: Sign up unsuccessfull - password too short
         When I click on "Sign up" link
-        Then I fill in "Name" with "Daniel"
+        And I fill in "Name" with "Daniel"
         And I fill in "Email" with "dan@gmail.com"
         And I fill in "Password" with "This"
         And I fill in "Password confirmation" with "This"
