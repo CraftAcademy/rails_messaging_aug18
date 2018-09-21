@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     before do
         @current_user = User.new
         @recipients = User.new
-        conversation = @current_user.send_message(@recipients, 'Lorem ipsum...', 'Subject')
+        @current_user.send_message(@recipients, 'Lorem ipsum...', 'Subject')
     end
 
 
