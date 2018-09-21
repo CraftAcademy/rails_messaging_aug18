@@ -1,7 +1,7 @@
-require 'coveralls'
-Coveralls.wear_merged!('rails')
-
 require 'cucumber/rails'
+require 'coveralls'
+
+Coveralls.wear_merged!('rails')
 
 ActionController::Base.allow_rescue = false
 
