@@ -9,7 +9,8 @@ And("I send a mail from {string} to {string}") do |sender, receiver|
     @sender.send_message(@receiver, 'Lorem ipsum...', 'Subject')
 end
 
-Then("I should have {string} messages") do |string|
+Then("I should have {string} messages") do |messages|
     count = @receiver.mailbox.inbox.count
+    expected_count = messages
     expect(count).to eq expected_count.to_i
 end
